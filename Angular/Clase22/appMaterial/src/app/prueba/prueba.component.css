@@ -1,0 +1,14 @@
+div.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    border: 1px solid black;
+}
+div.caja {
+    flex-grow: 1;
+    height: 120px;
+}
+
+div.caja.c1 {background: red;}
+div.caja.c2 {background: green}
+div.caja.c3 {background: yellow}

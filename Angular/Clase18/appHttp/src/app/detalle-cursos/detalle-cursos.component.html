@@ -1,0 +1,14 @@
+<h1>{{nombreMateria}}</h1>
+<p>
+	
+  ID Seleccionado = {{idCurso}}
+  <br>
+  ID Materia = {{idMateria}}
+  <br>
+  Fragmento = {{fragmentoUrl}}
+</p>
+
+<a [routerLink] = "['/cursos','detalle', 20, 1]" [queryParams]="{materia: 'Química'}" fragment="activo">Curso 20</a>
+
+<button (click)="navegacion()">Navegar</button>
+<button (click)="edicion()">Editar</button>

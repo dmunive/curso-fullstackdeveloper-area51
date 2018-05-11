@@ -1,0 +1,13 @@
+<div *ngFor="let servidor of servidores" [ngClass]="{'activo': servidor.estado==1, 'inactivo': servidor.estado==0}">
+	<h2>{{servidor.id}}</h2>
+	<h2>{{servidor.proveedor}}</h2>
+	<h3>{{servidor.descripcion}}</h3>
+	<button (click)="cambiarEstado(servidor)">Cambiar Estado</button>
+</div>
+
+<!--<div *ngFor="let servidor of servidores" [ngStyle]="{'background-color': (servidor.estado==1 ? 'red' : 'grey')}">
+		<h2>{{servidor.id}}</h2>
+		<h2>{{servidor.proveedor}}</h2>
+		<h3>{{servidor.descripcion}}</h3>
+		<button (click)="cambiarEstado(servidor)">Cambiar Estado</button>
+	</div>-->

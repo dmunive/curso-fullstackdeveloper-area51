@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+
+      <form [formGroup]="registro" (ngSubmit)="grabar()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Ingrese su nombre" formControlName="nombre">
+          <span class="ayuda" *ngIf="!registro.get('nombre').valid && registro.get('nombre').touched">
+            <span class="ayuda" *ngIf="registro.get('nombre').errors['required']">El nombre es requerido.</span>
+            <span class="ayuda" *ngIf="registro.get('nombre').errors['nombreInvalido']">Nombre no permitido.</span>
+          </span>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Ingrese su apellido" formControlName="apellido">
+          <span class="ayuda" *ngIf="!registro.get('apellido').valid && registro.get('apellido').touched">El apellido es requerido</span>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Ingrese su correo" formControlName="correo">
+          <span class="ayuda" *ngIf="!registro.get('correo').valid && registro.get('correo').touched">
+            <span class="ayuda" *ngIf="registro.get('correo').errors['required']">El correo es requerido.</span>
+            <span class="ayuda" *ngIf="!registro.get('correo').errors['required'] && registro.get('correo').errors['email']">El correo debe tener un formato válido.</span>
+          </span>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-danger">Grabar</button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>

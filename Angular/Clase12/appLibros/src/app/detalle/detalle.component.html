@@ -1,0 +1,22 @@
+<div *ngIf="libroSeleccionado">
+  <h1>
+    {{libroSeleccionado.titulo}}
+  </h1>
+  <p>
+    {{libroSeleccionado.autor}}
+  </p>
+  <p>
+    {{libroSeleccionado.descripcion}}
+  </p>
+  <form>
+    <textarea name="comentario" [(ngModel)]="nuevoComentario" cols="30" rows="10"></textarea><br>
+    <button (click)="agregarComentario()">Agregar comentario</button>
+  </form>
+  <div *ngIf="libroSeleccionado.comentarios">
+    <app-comentario *ngFor="let comentario of libroSeleccionado.comentarios">
+      {{comentario.texto}}
+      <hr>
+    </app-comentario>
+  </div>
+  
+</div>

@@ -1,0 +1,12 @@
+extends base
+
+block contenido
+	div.row
+		if(listado)
+			div.col.s8.push-s2
+				each item in listado
+					div.card.col.s4
+						div.card-content
+							h1.card-title= item.nombre
+							p= item.descripcion
+							a.btn.waves-effect.waves-light(href=`/editar/${item._id}`) Editar

@@ -1,0 +1,44 @@
+<!--<button mat-button>Ingresar</button>
+<br>
+<button mat-raised-button>Elevado</button>
+<br>
+<button mat-button color="primary">Primary</button>
+<br>
+<button mat-raised-button color="accent">Elevado con color</button>
+<br>
+<button mat-icon-button>
+  <mat-icon>face</mat-icon>
+</button>
+<br>
+<button mat-raised-button color="warn">
+  <mat-icon>build</mat-icon>
+  Configuración
+</button>
+
+
+
+<mat-form-field>
+  <input matInput placeholder="Ingresa tu fecha de nacimiento" [matDatepicker]="calendario" [max]="fechaMaxima">
+  <mat-datepicker-toggle matSuffix [for]="calendario"></mat-datepicker-toggle>
+  <mat-datepicker #calendario></mat-datepicker>
+</mat-form-field>-->
+<div fxLayout fxLayoutAlign="center">
+  <form fxLayout="column" fxFlex="450px" fxFlex.xs="100%" fxLayoutGap="20px">
+    <mat-form-field>
+      <input type="email" matInput placeholder="Correo">
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Contraseña">
+    </mat-form-field>
+    <button mat-raised-button color="primary">
+      <mat-icon>face</mat-icon>
+      Ingresar
+    </button>
+  </form>
+</div>
+
+<!--<div class="contenedor">
+  <div class="caja c1"></div>
+  <div class="caja c2"></div>
+  <div class="caja c3"></div>
+</div>-->

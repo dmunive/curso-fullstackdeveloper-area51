@@ -1,0 +1,10 @@
+<button (click)="verCarrito = !verCarrito">Toggle</button>
+
+<div *ngIf="!verCarrito">
+  <app-formulario></app-formulario>
+  <app-home></app-home>
+  <app-detalle></app-detalle>  
+</div>
+<div *ngIf="verCarrito">
+  <app-carrito></app-carrito>
+</div>

@@ -1,0 +1,17 @@
+mixin formulario(cine = {})
+	form(method="post",action=`/agregar/${cine._id}`).pink.lighten-2
+		div.input-field
+			input(type="text",id="nombre",name="nombre",placeholder="Ingrese el nombre del cine",value=cine.nombre)
+			label(for="nombre")
+		div.input-field
+			textarea(id="descripcion",name="descripcion",placeholder="Ingrese la descripción")= cine.descripcion
+			label(for="descripcion")
+		div.input-field
+		- const listaTipos = ["PRIME", "3D", "2D", "XTREME"]
+		- const generos = cine.tipos || []
+		each tipo in listaTipos
+			label
+				input(type="checkbox",id=tipo,name="tipos",value=tipo,checked=generos.includes(tipo)).filled-in
+				span.opcion.white-text #{tipo}
+		div.input-field
+			button.btn.waves-effect.waves-light(type="submit") Guardar

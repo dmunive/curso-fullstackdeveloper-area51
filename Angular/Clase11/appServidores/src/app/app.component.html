@@ -1,0 +1,5 @@
+<app-formulario (onServidor)="agregarServidor($event)"></app-formulario>
+
+<app-listado [servers]="servidores" (onUpdate)="seleccionar($event)"></app-listado>
+
+<app-edicion [server]="servidorAEditar" (onServer)="actualizar($event)" *ngIf="servidorAEditar"></app-edicion>

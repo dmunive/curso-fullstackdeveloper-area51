@@ -1,0 +1,17 @@
+<div appDirectivaSimple>Texto del div</div>
+
+<article appDirectivaInput colorPorDefecto="cyan" colorAlternativo="greenyellow">Texto del article</article>
+
+<section appDirectivaInput [colorPorDefecto]="miColor" colorAlternativo="greenyellow">Texto del section</section>
+
+<form>
+	<input type="text" placeholder="Ingrese su nombre"><br>
+	<input type="text" placeholder="Ingrese su fecha de nacimiento" appDirectivaFecha><br>
+	Distrito: <select appListaUbigeo [lista]="listaDistritos"></select>
+
+</form>
+
+<!--
+	<div appMapa [coordenadas]="coords"></div>
+	<div appVideo [proveedor]="proveedor" [idVideo]="idVideo"></div>
+-->

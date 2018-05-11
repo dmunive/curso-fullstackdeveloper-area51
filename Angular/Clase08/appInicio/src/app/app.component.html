@@ -1,0 +1,22 @@
+<h1>{{titulo}}</h1>
+<h3>{{fecha}}</h3>
+
+<h3>Lista de alumnos</h3>
+<ul>
+  <li *ngFor="let nombre of lista">
+    {{nombre}}
+  </li>
+</ul>
+
+<form>
+  <input type="text" name="nombre" [(ngModel)]="nombreAlumno">
+  <br>
+  <input type="text" name="apellido" (input)="setearApellido($event)">
+  <br>
+  Apellido: {{apellido}}
+  <br>
+  {{nombreAlumno}}
+  <p [innerHTML]="nombreAlumno"></p>
+</form>
+
+<button [disabled]="desactivado">Enviar</button>

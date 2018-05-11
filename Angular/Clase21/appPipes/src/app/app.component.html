@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <input type="text" placeholder="Ingrese su filtro" [(ngModel)]="busqueda">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Fecha</th>
+            <th>Actor</th>
+            <th>Todo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pela of peliculas | buscador:busqueda:['titulo','actor'],">
+            <td>{{pela.titulo | uppercase | filtro:15:" ...ver más" }}</td>
+            <td>{{pela.fecha | date:"longDate" | uppercase }}</td>
+            <td>{{pela.actor}}</td>
+            <td>{{pela | json}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.contenedor {
+			position: relative;
+			width: 150px;
+			height: 150px;
+			margin: 200px auto;
+		}
+
+		.slide {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 150px;
+			height: 150px;
+			transition: all 0.5s linear
+		}
+
+		.slide01 {
+			transform: translateX(0px)
+		}
+
+		.slide02 {
+			transform: translateX(-170px);
+			opacity: 0
+		}
+
+		.slide03 {
+			transform: translateX(-340px);
+			opacity: 0
+		}
+
+		.slide04 {
+			transform: translateX(-510px);
+			opacity: 0
+		}
+
+		.slide05 {
+			transform: translateX(170px);
+			opacity: 0
+		}
+
+		.slide06 {
+			transform: translateX(340px);
+			opacity: 0
+		}
+
+		.slide07 {
+			transform: translateX(510px);
+			opacity: 0
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="contenedor">
+		<div class="slide">1</div>
+		<div class="slide">2</div>
+		<div class="slide">3</div>
+		<div class="slide">4</div>
+		<div class="slide">5</div>
+		<div class="slide">6</div>
+		<div class="slide">7</div>
+	</div>
+
+	<script src="04-carrusel.js"></script>
+</body>
+
+</html>

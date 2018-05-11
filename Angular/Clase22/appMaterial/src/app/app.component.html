@@ -1,0 +1,20 @@
+<!--<app-prueba></app-prueba>-->
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sidebar>
+    Menu
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+      <mat-toolbar color="primary" fxLayout>
+          <button mat-icon-button (click)="sidebar.open()" fxHide.gt-xs>
+            <mat-icon>reorder</mat-icon>
+          </button>
+          <span>Sistema</span>
+          <div fxShow.md fxLayout fxFlex="100%" fxLayoutAlign="flex-end">
+            Menú
+          </div>
+        </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

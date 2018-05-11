@@ -1,0 +1,14 @@
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Curso</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let curso of lista">
+			<td>{{curso.idCurso}}</td>
+			<td>{{curso.titulo}}</td>
+		</tr>
+	</tbody>
+</table>

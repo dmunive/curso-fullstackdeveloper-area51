@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+
+      <form (ngSubmit)="grabar()" #f="ngForm">
+        <div ngModelGroup="datosUsuario" #datosUsuario="ngModelGroup">
+          <div class="form-group">
+            <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre" ngModel required #nombre="ngModel">
+            <span class="ayuda" *ngIf="!nombre.valid && nombre.touched">El nombre es requerido.</span>
+          </div>
+          <div class="form-group">
+            <input type="text" name="apellido" class="form-control" placeholder="Ingrese su apellido" ngModel required>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-warning" type="button" (click)="crearNombre()">Crear nombre</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="email" name="correo" class="form-control" placeholder="Ingrese su correo" ngModel required email #correo="ngModel">
+          <span class="ayuda" *ngIf="!correo.valid && correo.touched">
+            <span class="ayuda" *ngIf="correo.errors['required']">El campo es requerido</span>
+            <span class="ayuda" *ngIf="!correo.errors['required'] && correo.errors['email']">El correo debe tener un formato válido.</span>
+          </span>
+        </div>
+        <div class="form-group">
+          <textarea rows="10" name="descripcion" class="form-control" placeholder="Descripción breve" ngModel required></textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success">Grabar</button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>

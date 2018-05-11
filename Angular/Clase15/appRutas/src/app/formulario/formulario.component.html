@@ -1,0 +1,12 @@
+<form (ngSubmit)="guardar()" #f="ngForm">
+  <input type="text" placeholder="Nombre completo" required [(ngModel)]="alumno.nombreCompleto" name="nombreCompleto">
+  <br>
+  <input type="text" placeholder="Edad" appDirectivaNumber required [(ngModel)]="alumno.edad" name="edad">
+  <br>
+  <select [(ngModel)]="alumno.idCurso" name="idCurso">
+    <option *ngFor="let curso of listaCursos" [value]="curso.idCurso">{{curso.tituloCurso}}</option>
+  </select>
+  <br>
+  <button [disabled]="!f.valid">Guardar</button>
+  <button (click)="resetear()">Anular</button>
+</form>

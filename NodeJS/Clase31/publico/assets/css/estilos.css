@@ -1,0 +1,21 @@
+html, body {
+	height: 100%
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+div.contenido {
+	height: auto;
+}
+
+span.opcion {
+	display: inline-block;
+	margin-right: 8px;
+}
+
+form {
+	padding: 20px;
+}

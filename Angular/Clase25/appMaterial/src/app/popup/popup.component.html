@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{dataRecibida.titulo}}</h2>
+<mat-dialog-content>
+  El ID es {{dataRecibida.id}}
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button color="accent" mat-dialog-close="true">Aceptar</button>
+  <button mat-button color="warn" mat-dialog-close="false">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="enviar()">Enviar info</button>
+</mat-dialog-actions>
+

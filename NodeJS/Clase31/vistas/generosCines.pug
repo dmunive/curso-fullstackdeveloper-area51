@@ -1,0 +1,17 @@
+extends base
+
+block contenido
+	div.row
+		div.col.s8.push-s2
+			each genero in generos
+				a.btn.waves-effect.waves-light(href=`/generos/${genero._id}`) #{genero._id} (#{genero.cuenta})
+		div.col.s8.push-s2
+			if listado.length
+				each item in listado
+					div.card.col.s4
+						div.card-content
+							h1.card-title= item.nombre
+							p= item.descripcion
+							a.btn.waves-effect.waves-light(href=`/editar/${item._id}`) Editar
+			else
+				div.blue-text.card-panel Registra un cine

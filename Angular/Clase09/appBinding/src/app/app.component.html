@@ -1,0 +1,7 @@
+<app-servidor *ngFor="let item of arreglo; let indArreglo = index" [indice]="item">
+
+</app-servidor>
+<input type="text" placeholder="Escriba aquí" (input)="ejecutarInput($event)"><br>
+
+
+<button [disabled]="permitir" (click)="ejecutarClic()">Enviar</button>

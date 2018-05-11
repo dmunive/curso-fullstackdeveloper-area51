@@ -1,0 +1,10 @@
+<form>
+  <input type="text" placeholder="Nombre del servidor" [(ngModel)]="nombre" name="nombre"><br>
+  <input type="text" placeholder="Proveedor" [(ngModel)]="proveedor" name="proveedor"><br>
+  <input type="text" placeholder="IP" [(ngModel)]="ip" name="ip"><br>
+  <input type="text" placeholder="Usuario" [(ngModel)]="usuario" name="usuario"><br>
+  <input type="text" placeholder="Contraseña" [(ngModel)]="contrasena" name="contrasena"><br>
+  <input type="text" placeholder="Sistema Operativo" [(ngModel)]="sistema" name="sistema"><br>
+  <input type="text" placeholder="FTP" [(ngModel)]="ftp" name="ftp"><br>
+  <button type="button" (click)="actualizarServidor()">Actualizar</button>
+</form>

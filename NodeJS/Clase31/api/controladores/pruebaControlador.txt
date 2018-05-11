@@ -1,0 +1,25 @@
+const controlador = {
+	listado: async (req, res, next) => {
+		const resultados = (await Peliculas.listado())
+			.catch(
+			error => console.log(error)
+			)
+
+	}
+}
+
+ruteador.get("/listado", manejadorErrores.errorCatch(controlador.listado))
+// ruteador.get("/listado", controlador.listado)
+
+
+const manejadorErrores = {
+	errorCatch: (ftn: (req, res, next) => Promise<any>) => {
+
+		return (req, res, next) => {
+			// return ftn(req, res, next).catch(error => next(error))
+			return ftn(req, res, next).catch(next)
+		}
+
+
+	}
+}

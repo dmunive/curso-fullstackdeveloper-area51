@@ -1,0 +1,13 @@
+<div *ngIf="servidores.length > 0 else noHayServidores">
+  <h2>Lista de servidores</h2>
+  <app-servidor *ngFor="let servidor of servidores" [server]="servidor" (onEditar)="editar($event)">
+    
+    <hr>
+     {{servidor.nombre.toUpperCase()}}
+    <hr>
+
+  </app-servidor>
+</div>
+<ng-template #noHayServidores>
+  No hay servidores
+</ng-template>

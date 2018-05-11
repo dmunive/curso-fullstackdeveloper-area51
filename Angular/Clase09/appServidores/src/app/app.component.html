@@ -1,0 +1,23 @@
+<form>
+  <input type="text" placeholder="Nombre del servidor" #nombre><br>
+  <input type="text" placeholder="Proveedor" #proveedor><br>
+  <input type="text" placeholder="IP" #ip><br>
+  <input type="text" placeholder="Usuario" #usuario><br>
+  <input type="text" placeholder="Contraseña" #contrasena><br>
+  <input type="text" placeholder="Sistema Operativo" #sistema><br>
+  <button type="button" (click)="agregarServidor(nombre.value, proveedor.value, ip.value, usuario.value, contrasena.value, sistema.value)">Agregar</button>
+</form>
+
+<div *ngIf="servidores.length > 0 else noHayServidores">
+  <h2>Lista de servidores</h2>
+  <app-servidor *ngFor="let servidor of servidores" [server]="servidor">
+    
+    <hr>
+     {{servidor.nombre.toUpperCase()}}
+    <hr>
+
+  </app-servidor>
+</div>
+<ng-template #noHayServidores>
+  No hay servidores
+</ng-template>

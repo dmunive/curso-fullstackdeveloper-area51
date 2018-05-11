@@ -1,0 +1,12 @@
+extend base
+
+block contenido
+    h1 Cursos Listado
+    table
+        tr
+            th Nombre
+            th Descripción
+        each registro in registros
+            tr
+                td= registro.nombre
+                td= registro.descripcion

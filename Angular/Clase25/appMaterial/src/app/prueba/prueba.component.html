@@ -1,0 +1,68 @@
+<!--<button>Botón simple</button>
+<br>
+<button mat-button>MatButton</button>
+<br>
+<button mat-flat-button>MatFlatButton</button>
+<br>
+<button mat-raised-button>MatRaisedButton</button>
+<br>
+<button mat-stroked-button>MatStrokeButton</button>
+<br>
+<button mat-icon-button>
+  <mat-icon>face</mat-icon>
+</button>
+<br>
+<button mat-fab>
+  <mat-icon>lock</mat-icon>
+</button>
+<br>
+<button mat-mini-fab>
+  <mat-icon>more_vert</mat-icon>
+</button>
+<br>
+<button mat-icon-button color="primary">
+  <mat-icon>add</mat-icon>
+  Agregar
+</button>
+<br>
+<button mat-raised-button color="warn">
+  <mat-icon>add</mat-icon>
+  Agregar
+</button>
+<br>
+<button mat-stroked-button color="accent">
+  <mat-icon>add</mat-icon>
+  Agregar
+</button>-->
+<mat-spinner></mat-spinner>
+<mat-progress-spinner mode="determinate" [value]="avance" color="accent"></mat-progress-spinner>
+<div>{{avance}}</div>
+<mat-progress-bar [value]="avance" color="warn"></mat-progress-bar>
+
+
+<div fxLayout fxLayoutAlign="center">
+
+
+  <form [formGroup]="grupoForm" fxLayout fxLayout.xs="column" fxFlex="800px" fxFlex.xs="300px" fxLayoutGap="20px">
+    <mat-form-field hintLabel="Nombre humano">
+      <input type="text" placeholder="Ingrese su nombre" matInput required #nombre formControlName="nombre">
+      <mat-hint align="end">{{nombre.value ? nombre.value.length : '0'}} de 10 caracteres</mat-hint>
+      <mat-error>El nombre es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="email" placeholder="Ingrese su correo" required email matInput formControlName="correo">
+      <mat-error *ngIf="grupoForm.get('correo').hasError('required')">El correo es requerido</mat-error>
+      <mat-error *ngIf="grupoForm.get('correo').hasError('email') && !grupoForm.get('correo').hasError('required')">Tiene que tener formato de correo</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" [matDatepicker]="fecha" placeholder="Ingrese su fecha de nacimiento" matInput [max]="fechaMaxima" [min]="fechaMinima">
+      <mat-datepicker-toggle matSuffix [for]="fecha"></mat-datepicker-toggle>
+      <mat-datepicker #fecha></mat-datepicker>
+    </mat-form-field>
+  </form>
+
+</div>
+
+<button mat-raised-button (click)="abrirPopup()">Abrir popup</button>
+
+
